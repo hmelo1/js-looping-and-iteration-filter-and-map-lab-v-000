@@ -13,5 +13,11 @@ function driverNamesWithRevenueOver(drivers, revenue){
 };
 
 function exactMatch(drivers, attribute){
-
-}
+  return drivers.filter(function(driver){
+    if (driver.revenue == attribute.revenue){
+      return driver.revenue
+    } else if (driver.name == attribute.name){
+      return driver.name
+    }
+  });
+};
