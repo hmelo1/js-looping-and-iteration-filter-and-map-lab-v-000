@@ -24,4 +24,11 @@ function exactMatch(drivers, attribute){
 
 function exactMatchToList(drivers, attribute){
   let new_drivers = exactMatchToList(drivers, attribute);
+  return new_drivers.map(function(new_driver){
+    if (attribute.revenue){
+      return new_driver.revenue;
+    } else if (attribute.name){
+      return new_driver.name;
+    }
+  });
 };
