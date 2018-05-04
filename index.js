@@ -25,10 +25,6 @@ function exactMatch(drivers, attribute){
 function exactMatchToList(drivers, attribute){
   let new_drivers = exactMatch(drivers, attribute);
   return new_drivers.map(function(new_driver){
-    if (attribute.revenue){
-      return new_driver.name;
-    } else if (attribute.name){
-      return new_driver.name;
-    }
+    new_driver.name;
   });
 };
